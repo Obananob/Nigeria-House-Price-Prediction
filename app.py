@@ -3,11 +3,11 @@ import pandas as pd
 import joblib
 
 
-model = joblib.load('/content/House_price.pkl')
-model_columns = joblib.load('/content/model_columns.pkl')
+model = joblib.load('/House_price.pkl')
+model_columns = joblib.load('/model_columns.pkl')
 
 
-df = pd.read_csv('/content/nigeria_houses_data.csv')
+df = pd.read_csv('/nigeria_houses_data.csv')
 
 
 st.set_page_config(page_title="Naija House Predictor", layout="centered")
