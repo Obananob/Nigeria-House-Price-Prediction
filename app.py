@@ -54,9 +54,7 @@ if st.button("Predict Price", type="primary"):
 
 
     if 'model_columns' not in locals():
-        # This is a temporary placeholder. In a real app, model_columns should be saved with the model.
-        # Or, the model should be trained with all possible dummy variables, and then new data needs to align.
-        # For this exercise, I'll use the columns from X_train as a proxy.
+        
         model_columns = pd.get_dummies(df.drop('price', axis=1), columns=['title', 'town', 'state'], drop_first=True).columns
 
     final_input = user_input_encoded.reindex(columns=model_columns, fill_value=0)
